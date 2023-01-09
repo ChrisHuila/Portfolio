@@ -960,6 +960,15 @@ body.light-theme{
   .skills__content{
     padding: 2rem 4rem;
   }
+  .skills__box--education{    
+    flex-direction: column;
+    
+  }
+  .skills__education{
+    grid-template-columns: repeat(3 , 1fr);
+    column-gap: 1rem;
+  }
+
   .services__container{
     grid-template-columns: repeat(1, 400px);
     justify-content: center;
