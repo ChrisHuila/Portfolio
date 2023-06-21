@@ -320,9 +320,13 @@ body.light-theme{
 .home__name{
   font-size: var(--biggest-font-size);
 }
-
+/*     transform: scale(1.5) left: -10px */
 .home__img{
-  width: 160px;
+  position: relative;
+  transform: scale(1.5);
+  left: -10px;
+  bottom: 30px;
+  
 }
 
 .home__handle{
