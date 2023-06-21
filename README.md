@@ -6,5 +6,12 @@
 
 <p> Feel free to explore my portfolio and discover the diverse range of websites I have created. </p>
 
+## Built using this Technologies 
+
+```bash
+HTML5
+CSS3
+JavaScript
+```
 
 
