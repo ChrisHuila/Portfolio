@@ -1085,6 +1085,9 @@ body.light-theme{
     column-gap: 3rem;
     grid-template-rows: auto auto;
   }
+  .skills__content:nth-child(1){
+    min-width: 376px;
+  }
   .skills__content:nth-child(3){
     grid-column: 1/3;
 }
