@@ -73,6 +73,7 @@ html {
 
 body,
 button,
+input[type=submit],
 input,
 textarea {
   font-family: var(--body-font);
@@ -98,6 +99,7 @@ a {
   text-decoration: none;
 }
 
+input[type=submit],
 button {
   cursor: pointer;
   border: none;

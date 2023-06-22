@@ -134,7 +134,7 @@ sr.reveal('.home__handle', {delay: 700})
 sr.reveal('.home__social, .home__scroll', {delay: 900, origin: 'bottom'})
 
 /*=============== FORM VALIDATION ===============*/
-/*
+
 const btnSend  = document.querySelector('.contact__form button');
 const form = document.querySelector('.contact__form');
 
@@ -228,4 +228,3 @@ function resetform(){
     form.reset();
     startApp()
 }
-*/
