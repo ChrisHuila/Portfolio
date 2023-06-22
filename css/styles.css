@@ -537,7 +537,10 @@ body.light-theme{
 
 .services__title{
   font-size: var(--h3-font-size);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: start;
+  
 }
 
 .services__button{
@@ -547,6 +550,7 @@ body.light-theme{
   align-items: center;
   column-gap: .25rem;
   cursor: pointer;
+  padding: 0 1rem;
 }
 
 .services__button:hover .services__icon{
@@ -575,14 +579,14 @@ body.light-theme{
 .services__modal-content{
   position: relative;
   background-color: var(--body-color);
-  padding: 4.5rem 1.5rem 2.5rem;
+  padding: 3.5rem 1.5rem 3.5rem;
   border-radius: 1.5rem;
   text-align: left;
 }
 
 .services__modal-title,
 .services__modal-description{
-  text-align: center;
+  text-align: start;
 }
 
 .services__modal-title{
@@ -594,6 +598,7 @@ body.light-theme{
 .services__modal-description{
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .services__modal-list{
@@ -956,12 +961,13 @@ body.light-theme{
   }
   .services__modal-content{
     width: 500px;
-    padding: 4.5rem 2.5rem 2.5rem;
+    padding: 3.5rem 2.5rem 3.5rem;
   }
-  .services__modal-description{
+  .services__title,
+  .services__button, 
+  .services__modal-description {
     padding: 0 3.5rem;
   }
-
   .work__container{
     justify-content: center;
   }
@@ -1067,9 +1073,6 @@ body.light-theme{
     grid-template-columns: repeat(1, 400px);
     column-gap: 3rem;
     text-align: center;
-  }
-  .services__card{
-    padding: 5rem 2rem 1.5rem;
   }
 
   .work__container{
