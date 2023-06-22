@@ -49,26 +49,6 @@ function activeWork(){
 }
 
 linkWork.forEach(l => l.addEventListener('click', activeWork) );
-/*=============== SWIPER TESTIMONIAL ===============*/
-let swiperTestimonial = new Swiper(".testimonial__container", {
-    spaceBetween:24,
-    loop:true,
-    grabCursor:true,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-    },
-    breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 48,
-        },
-    },
-});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -134,7 +114,7 @@ sr.reveal('.home__handle', {delay: 700})
 sr.reveal('.home__social, .home__scroll', {delay: 900, origin: 'bottom'})
 
 /*=============== FORM VALIDATION ===============*/
-
+/*
 const btnSend  = document.querySelector('.contact__form button');
 const form = document.querySelector('.contact__form');
 
@@ -228,3 +208,4 @@ function resetform(){
     form.reset();
     startApp()
 }
+*/
