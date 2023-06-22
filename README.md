@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-## Built using this Technologies 
+## Portfolio Built using this Technologies 
 
 ```bash
 HTML5
