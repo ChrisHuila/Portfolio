@@ -427,6 +427,7 @@ body.light-theme{
   row-gap: 2.5rem;
 }
 .about__img{
+  display: none;
   width: 220px;
   border-radius: 1.5rem;
   justify-self: center;
@@ -466,7 +467,6 @@ body.light-theme{
 .about__description{
   margin-bottom: 2rem;
   text-align: justify;
-
 }
 
 /*=============== SKILLS ===============*/
@@ -586,7 +586,7 @@ body.light-theme{
 
 .services__modal-title,
 .services__modal-description{
-  text-align: start;
+  text-align: justify;
 }
 
 .services__modal-title{
@@ -619,6 +619,7 @@ body.light-theme{
 
 .services__modal-info{
   font-size: var(--small-font-size);
+  text-align: justify;
 }
 
 .services__modal-close{
@@ -1040,6 +1041,7 @@ body.light-theme{
     column-gap: 4rem;
   }
   .about__img{
+    display: initial;
     width: 350px;
   }
   .about__data{
