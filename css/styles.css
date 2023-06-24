@@ -178,6 +178,12 @@ body.light-theme{
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
 }
 
+.light-theme .contact__form-mError{
+  color: #ff3333;
+}
+.light-theme .contact__form-mSent{
+  color: #53a653;
+}
 .light-theme::-webkit-scrollbar{
   background-color: hsl(var(--second-hue), 8%, 66%);
 }
@@ -818,16 +824,14 @@ body.light-theme{
 }
 
 .contact__form-mError {
-  color: #f74545;
+  color: #f3ed3d;
   text-align: center;
-  border: #f74545 solid 1px;
   padding: .75rem;
   margin-top: 1.5rem;
 }
 .contact__form-mSent{
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  background: #4b4b4b;
   text-transform: uppercase;
   padding: .5rem;
   margin-top: 1.5rem;

@@ -7,6 +7,7 @@ const ContactForm = () => {
     const form = useRef();
     
    const [ error, setError ] = useState(null)
+   const [ sent, setSent ] = useState(null)
 
     const [ userdata, setUserData ] = useState({
         user_name: '',
@@ -37,8 +38,13 @@ const ContactForm = () => {
          setError('Invalid email')
          return
         }
-
         setError(null)
+
+        setUserData({
+            user_name: '',
+            user_email: '',
+            message:''
+        })
 
         emailjs.sendForm(
             import.meta.env.VITE__SERVICE_ID,
@@ -46,9 +52,18 @@ const ContactForm = () => {
             form.current, 
             import.meta.env.VITE_PUBLIC_KEY)
         .then((result) => {
-            console.log(result.text);
+            setSent('Message sent successfully')
+
+            setTimeout(() => {
+                setSent(null)
+            },4000)
+
         }, (error) => {
-            console.log(error.text);
+            setSent('Message failed to send')
+            
+            setTimeout(() => {
+                setSent(null)
+            },4000)
         });
   };
 
@@ -74,7 +89,8 @@ const ContactForm = () => {
             
             <input type="submit" value="Send Messege" className="button" />
         </form>
-        {error && <p style={{color: 'white'}}> {error} </p>}
+        {error && <p className="contact__form-mError"> {error} </p>}
+        {sent && <p className="contact__form-mSent"> {sent} </p>}
     </div>
   )
 }
