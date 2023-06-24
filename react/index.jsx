@@ -1,14 +1,22 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import emailjs from '@emailjs/browser';
-import useContactForm from "./hooks/useContactForm";
 
 const ContactForm = () => {
     const form = useRef();
+    
+   const [ error, setError ] = useState(null)
 
-   const { userdata, setUserData } = useContactForm()
+    const [ userdata, setUserData ] = useState({
+        user_name: '',
+        user_email: '',
+        message:''
+    })
+
     const { user_name, user_email, message} = userdata;
+
+    const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const handleChange = e => {
        setUserData({
@@ -16,9 +24,21 @@ const ContactForm = () => {
         [e.target.name]: e.target.value
        }) 
     }
-
+    
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if( user_name.trim() === '' || user_email.trim() === '' || message.trim() === ''){
+         setError('All fields are required')
+         return
+        }
+
+        if(!er.test(user_email)){
+         setError('Invalid email')
+         return
+        }
+
+        setError(null)
 
         emailjs.sendForm(
             import.meta.env.VITE__SERVICE_ID,
@@ -54,6 +74,7 @@ const ContactForm = () => {
             
             <input type="submit" value="Send Messege" className="button" />
         </form>
+        {error && <p style={{color: 'white'}}> {error} </p>}
     </div>
   )
 }
