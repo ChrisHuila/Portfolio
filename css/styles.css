@@ -330,7 +330,8 @@ body.light-theme{
 }
 .home__img{
   position: relative;
-  scale: 1.5;
+  /* scale: 1.5; */
+  transform: scale(1.6);
   left: -15px;
   bottom: 30px;
   
